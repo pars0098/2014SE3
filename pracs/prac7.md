@@ -102,3 +102,11 @@ int ttbl_vector(int i1,int i2,int i3,int i4,
 The first test to perform is that tilting a board that is empty results in a board which is still empty:
 
   e|=ttbl_vector(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Empty board is empty after left tilt",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+
+Like testing the individual line tilts, testing the board requires every scenario is tested. For tilting left the tests are:
+
+  e|=ttbl_vector(1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,"Values stay on left after left tilt",1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0);
+  e|=ttbl_vector(0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,"Values from right shift left after left tilt",1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0);
+  e|=ttbl_vector(0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,"Values from middle shift left after left tilt",1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0);
+  e|=ttbl_vector(1,2,4,8,1,2,4,8,1,2,4,8,1,2,4,8,"Distinct values don't combine after left tilt",1,2,4,8,1,2,4,8,1,2,4,8,1,2,4,8);
+  e|=ttbl_vector(2,2,0,0,2,2,4,4,4,4,0,8,2,2,2,2,"Various Combination Tests 1 after left tilt",4,0,0,0,4,8,0,0,8,8,0,0,4,4,0,0);
