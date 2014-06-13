@@ -69,3 +69,17 @@ This test is called after the board create tests, with the following values
   e|=board_access_test(255);
 
 
+
+The next code path to test is sliding the board in a particular direction.  This test will require a function to create a board of a certain size, and fill the board with values - a known state - then execute a function on the board and validate the results. The function header is shown below - the mechanics are in the source code.
+
+int board4_vector_test(int i1,int i2,int i3,int i4,
+					   int i5,int i6,int i7,int i8,
+					   int i9,int i10,int i11,int i12,
+					   int i13,int i14,int i15,int i16,
+					   char *msg,
+                       int o1,int o2,int o3,int o4,
+					   int o5,int o6,int o7,int o8,
+					   int o9,int o10,int o11,int o12,
+					   int o13,int o14,int o15,int o16,
+                       int (*func)(int,int **)
+					   ) { ... }
