@@ -122,3 +122,9 @@ Individual scenarios for testing tilting right are added
   e|=ttbr_vector(0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,"Values from middle shift right after right tilt",0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1);
   e|=ttbr_vector(1,2,4,8,1,2,4,8,1,2,4,8,1,2,4,8,"Distinct values don't combine after right tilt",1,2,4,8,1,2,4,8,1,2,4,8,1,2,4,8);
   e|=ttbr_vector(2,2,0,0,2,2,4,4,4,4,0,8,2,2,2,2,"Various Combination Tests 1 after right tilt",0,0,0,4,0,0,4,8,0,0,8,8,0,0,4,4);
+
+The testing of tilting up and down is implemented in the same manner.
+
+The next code path to test will be adding a new number to a random position on the board.
+
+Finally, after a tilt, test the code path to evaluate whether a game is over or not.
