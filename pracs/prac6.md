@@ -3,7 +3,7 @@ Dam Gate Automated Control System Test Plan
 Dams and reservoirs play an important role in maintaining a fresh water supply around the world. They also represent a huge risk to all those that rely on them and that live around them. In January 2011, widespread flooding devastated areas of Queensland. In the wake of this flooding, and in search of someone to blame, attention turned to the operation of Wivenhoe Dam during the event. Questions were asked such as how much water was released, how much water actually needed to be released, and were there appropriate systems in place to manage the release of water. While these flooding events do not happen often, when they do you need to release enough water that the dam doesn't overflow, but not so much water that you are flooding areas downstream. This is just one example where control of a dam level requires careful calculation. However, given that controlling the level can be calculated, it is also something that can be automated. A system which monitors the dam level and rain fall levels to determine how much water should be released could be put in place, removing reliance on the operator to make hasty decisions, and providing a testable and provable system which would stand up in court.
 
 The system would consist of the following components
-
+```
 Actuated dam gates
 
 Dam level sensor
@@ -60,12 +60,12 @@ Each function can fail in one or more ways
 		Calculate an incorrect position
 		
 		Send an incorrect position
-
+```
 
 Testing of this system would be fundamental and critical, as the consequences of failure are severe - possible fatalities, law suits, insurance claims, the list goes on. Each component of the system, and even subcomponents of them, would need to be meticulously tested to ensure correct function. On-going maintenance and testing would also be required, so the system should be both built to maintain and built to test.
 
 Each component should be individually tested
-
+```
 Gates
 
 	Test dam gate open and close manually
@@ -96,7 +96,7 @@ Rain
 	Check that the rainfall level recorded in the control system matches the level at the guage
 	
 Control System
-
+```
 Finally, the system should be tested as a whole. Given that it may not possible to test in real circumstances, the testing input of the control system should be used to operate the dam gates. Manual input should be supplied and the gate position observed.
 
 Testing the calculation itself - the formula which determines how far to open the gates - would rely on actual data to back up the assumptions made in the formula.
