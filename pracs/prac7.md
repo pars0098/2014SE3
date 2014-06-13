@@ -114,3 +114,11 @@ Like testing the individual line tilts, testing the board requires every scenari
 Next tests for tilting the board right is written, calling the helper function ttbr_vector (which is the same as ttbl_vector but calling the tilt_board_right function instead):
 
   e|=ttbr_vector(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Empty board is empty after right tilt",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+
+Individual scenarios for testing tilting right are added
+
+  e|=ttbr_vector(0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,"Values stay on right after right tilt",0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1);
+  e|=ttbr_vector(1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,"Values from left shift right after right tilt",0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1);
+  e|=ttbr_vector(0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,"Values from middle shift right after right tilt",0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1);
+  e|=ttbr_vector(1,2,4,8,1,2,4,8,1,2,4,8,1,2,4,8,"Distinct values don't combine after right tilt",1,2,4,8,1,2,4,8,1,2,4,8,1,2,4,8);
+  e|=ttbr_vector(2,2,0,0,2,2,4,4,4,4,0,8,2,2,2,2,"Various Combination Tests 1 after right tilt",0,0,0,4,0,0,4,8,0,0,8,8,0,0,4,4);
