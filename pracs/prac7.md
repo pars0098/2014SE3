@@ -1,6 +1,6 @@
 White-box Testing 2048
 
-In these test each code path will be tested and the bounds of each condition tested.
+In these tests each code path will be tested and the bounds of each condition tested.
 
 The first code path to be tested is creating the board. The minimum board size is 1, and the maximum is 255. If the size is outside the bounds the board is not created and 0 is returned. Tests to create the board of size 1 and 255 should both return a board, while 0 and 256 should return NULL.
 
@@ -110,3 +110,7 @@ Like testing the individual line tilts, testing the board requires every scenari
   e|=ttbl_vector(0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,"Values from middle shift left after left tilt",1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0);
   e|=ttbl_vector(1,2,4,8,1,2,4,8,1,2,4,8,1,2,4,8,"Distinct values don't combine after left tilt",1,2,4,8,1,2,4,8,1,2,4,8,1,2,4,8);
   e|=ttbl_vector(2,2,0,0,2,2,4,4,4,4,0,8,2,2,2,2,"Various Combination Tests 1 after left tilt",4,0,0,0,4,8,0,0,8,8,0,0,4,4,0,0);
+
+Next tests for tilting the board right is written, calling the helper function ttbr_vector (which is the same as ttbl_vector but calling the tilt_board_right function instead):
+
+  e|=ttbr_vector(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Empty board is empty after right tilt",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
